@@ -330,7 +330,7 @@
       <div class="work-grid">
 
         <!-- REAL SAMPLE 1 -->
-        <a href="article-sole-trader.html">
+        <a href="article-sole-trader.html" class="card reveal">
           <span class="cat">Company &amp; Tax</span>
           <h3>Sole trader or limited company — which should you choose?</h3>
           <p>A founder-facing guide to picking a business structure: liability, tax, and admin, explained without the jargon.</p>
