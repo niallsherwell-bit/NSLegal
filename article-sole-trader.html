@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sole trader or limited company — which should you choose?</title>
+
+<!--
+  ============================================================
+  ARTICLE TEMPLATE — how to reuse it for your next pieces:
+   1. Copy this file, rename it (e.g. article-employment-notice.html)
+   2. Replace the title, dek, meta row, and body text below
+   3. Keep the structure: <h2> for sections, <p> for paragraphs
+   4. Update [YOUR NAME] and the back-link / contact email
+   5. Link it from the matching card on your portfolio page
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,0,600;9..144,1,400;9..144,1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#FAF8F4;
+    --paper-2:#F2EEE6;
+    --ink:#1B2230;
+    --ink-soft:#41485A;
+    --ink-faint:#7C8294;
+    --oxblood:#7E2230;
+    --oxblood-bright:#A12E3C;
+    --line:#E2DCD0;
+    --line-strong:#CFC7B7;
+    --display:"Fraunces", Georgia, serif;
+    --body:"Newsreader", Georgia, serif;
+    --mono:"JetBrains Mono", ui-monospace, monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--body); -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+
+  /* top bar */
+  header.bar{border-bottom:1px solid var(--line); background:var(--paper);}
+  .bar-in{max-width:760px; margin:0 auto; padding:0 28px; height:62px; display:flex; align-items:center; justify-content:space-between;}
+  .back{font-family:var(--mono); font-size:12.5px; letter-spacing:.04em; color:var(--ink-soft); text-decoration:none; display:inline-flex; gap:8px; align-items:center;}
+  .back:hover{color:var(--oxblood);}
+  .back .arr{transition:transform .15s ease;}
+  .back:hover .arr{transform:translateX(-3px);}
+  .wordmark{font-family:var(--display); font-weight:600; font-size:17px; text-decoration:none; color:var(--ink);}
+  .wordmark .dot{color:var(--oxblood);}
+
+  /* article shell */
+  article{max-width:760px; margin:0 auto; padding:0 28px;}
+  .head{padding:64px 0 0;}
+  .cat{font-family:var(--mono); font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--oxblood); margin:0;}
+  h1.title{
+    font-family:var(--display); font-weight:600;
+    font-size:clamp(34px,5.6vw,52px); line-height:1.07; letter-spacing:-.02em;
+    margin:18px 0 0;
+  }
+  .dek{font-size:clamp(20px,2.6vw,23px); line-height:1.45; color:var(--ink-soft); margin:22px 0 0; max-width:40ch;}
+
+  .meta{
+    display:flex; flex-wrap:wrap; gap:22px;
+    margin:34px 0 0; padding:18px 0;
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .meta div{display:flex; flex-direction:column; gap:3px;}
+  .meta .k{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint);}
+  .meta .v{font-size:15px; color:var(--ink);}
+
+  /* body */
+  .body{padding:14px 0 0; font-size:20px; line-height:1.72;}
+  .body p{margin:24px 0 0; color:#252C3B;}
+  .body p:first-of-type{margin-top:34px;}
+  .body p:first-of-type::first-letter{
+    font-family:var(--display); font-weight:600;
+    float:left; font-size:64px; line-height:.86; padding:6px 12px 0 0; color:var(--oxblood);
+  }
+  .body h2{
+    font-family:var(--display); font-weight:500; font-size:clamp(25px,3.4vw,31px);
+    letter-spacing:-.015em; line-height:1.15; margin:48px 0 0;
+  }
+
+  /* short answer box */
+  .short{
+    margin:34px 0 0; background:var(--paper-2);
+    border-left:3px solid var(--oxblood); border-radius:0 4px 4px 0;
+    padding:22px 26px;
+  }
+  .short .k{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--oxblood); margin:0 0 8px;}
+  .short p{margin:0; font-size:18.5px; line-height:1.6; color:var(--ink);}
+
+  /* disclaimer */
+  .note{
+    margin:52px 0 0; padding:20px 24px;
+    border:1px solid var(--line-strong); border-radius:4px;
+    font-size:15.5px; line-height:1.55; color:var(--ink-soft);
+  }
+  .note .k{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); display:block; margin-bottom:8px;}
+
+  /* author / cta */
+  .byline-end{
+    margin:52px 0 0; padding:30px 0 0; border-top:1px solid var(--line);
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px;
+  }
+  .byline-end .who{font-family:var(--display); font-size:19px;}
+  .byline-end .who span{display:block; font-family:var(--mono); font-size:12px; letter-spacing:.04em; color:var(--ink-faint); margin-top:5px;}
+  .byline-end a.btn{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:.06em; text-transform:uppercase;
+    text-decoration:none; background:var(--ink); color:var(--paper); padding:13px 22px; border-radius:2px;
+    transition:background .15s ease;
+  }
+  .byline-end a.btn:hover{background:var(--oxblood);}
+
+  footer.bar{margin-top:56px; border-top:1px solid var(--line);}
+  footer .bar-in{justify-content:center;}
+  footer small{font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; color:var(--ink-faint);}
+
+  a:focus-visible, .btn:focus-visible{outline:2px solid var(--oxblood-bright); outline-offset:3px;}
+  @media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} .back .arr,.byline-end a.btn{transition:none;} }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="back" href="index.html"><span class="arr">←</span> All writing</a>
+    <a class="wordmark" href="index.html">[YOUR NAME]<span class="dot">.</span></a>
+  </div>
+</header>
+
+<article>
+
+  <div class="head">
+    <p class="cat">Company &amp; Tax</p>
+    <h1 class="title">Sole trader or limited company — which should you choose?</h1>
+    <p class="dek">A plain-English guide to picking your business structure: what each one means for your liability, your tax bill, and your admin.</p>
+
+    <div class="meta">
+      <div><span class="k">Area</span><span class="v">Company &amp; Tax</span></div>
+      <div><span class="k">Read</span><span class="v">5 min</span></div>
+      <div><span class="k">Jurisdiction</span><span class="v">England &amp; Wales</span></div>
+      <div><span class="k">Updated</span><span class="v">[Month 2026]</span></div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <p>You've started earning from your own work — freelancing, contracting, or running a small venture — and now there's a decision to make: stay a sole trader, or set up a limited company? It sounds like dry paperwork, but the choice shapes who's on the hook if things go wrong, how much tax you pay, and how much admin you carry. Here's how to think about it.</p>
+
+    <div class="short">
+      <p class="k">The short answer</p>
+      <p>If you're just starting out and the risks are low, being a sole trader is simpler and cheaper. Once your profits grow or you're taking on real liability, a limited company usually makes more sense — for the legal protection, and often for the tax. The detail is below.</p>
+    </div>
+
+    <h2>What is a sole trader?</h2>
+    <p>A sole trader is the simplest way to run a business as an individual, without setting up a separate company. You and the business are legally the same thing. Picture a self-employed plumber who owns his own van and tools: he <em>is</em> the business, and he owns its assets personally.</p>
+    <p>That simplicity has a sting. As a sole trader, you're personally responsible for the business's contracts and debts. If you take out a business loan and can't repay it, your personal assets are at risk — not just your equipment, but potentially your car or your home, which can be sold under a court order through a trustee in bankruptcy (the person appointed to recover what's owed to creditors).</p>
+    <p>On tax, a sole trader pays income tax on their profits through Self Assessment, plus self-employed National Insurance, and the rate rises as you earn more. You'll need to register with HMRC and file a return each year once your trading income passes £1,000 — and file on time, to avoid penalties.</p>
+    <p>The upside is far fewer formalities. There's no need to register with Companies House, only with HMRC for Self Assessment. There's no minimum capital to hold beyond any security a lender asks for, and no constitutional documents to draw up before you can start trading.</p>
+
+    <h2>What is a limited company?</h2>
+    <p>A private company limited by shares is a separate legal entity that issues shares to its owners, the shareholders. Instead of <em>being</em> the business, you own a slice of it.</p>
+    <p>Its headline advantage is limited liability. Because the company is legally a person in its own right, debts and legal claims against it are generally recovered from the company's assets, not your personal ones. Your downside is, in principle, limited to what you've put in.</p>
+    <p>It can also make raising money easier. A private company can't sell shares to the public, but lenders often treat a company with identifiable assets as lower-risk than a sole trader, which can help with borrowing — though banks frequently ask the director (often you) to give a personal guarantee, which puts your own assets back on the line.</p>
+    <p>On tax, companies pay corporation tax: 19% on profits under £50,000 and 25% on profits over £250,000, with a marginal band between the two — generally lower than income tax rates. The company itself gets no personal allowance. But remember the second layer: when you take money out as salary or dividends, that's taxed in your hands under the income tax rules above.</p>
+    <p>The trade-off is admin. A company needs articles of association, a memorandum, annual accounts and ongoing filings. Setting one up is cheaper than people expect — around £50 online, with model articles and templates provided — but staying compliant, especially on tax, usually means paying for an accountant.</p>
+
+    <h2>So what should you choose?</h2>
+    <p>It depends on a few specific things, not just preference. Stage matters most: early on, when profits are modest and risks are low, the simplicity of being a sole trader often wins. As you grow — bigger contracts, more borrowing, more at stake — the protection and tax treatment of a company start to earn their keep.</p>
+    <p>Weigh four things: your profit level, how much personal risk you're exposed to, your appetite for admin, and how you want clients to see you. And when the stakes get real, it's worth getting tailored advice before you commit either way.</p>
+
+    <div class="note">
+      <span class="k">A note</span>
+      This article is general information about the law in England and Wales, not legal or tax advice. Your own circumstances can change the answer — speak to a qualified solicitor or accountant before making a decision.
+    </div>
+
+    <div class="byline-end">
+      <div class="who">By [YOUR NAME]<span>Plain-English legal content · England &amp; Wales</span></div>
+      <a class="btn" href="mailto:[you@email.com]">Commission a piece</a>
+    </div>
+
+  </div>
+</article>
+
+<footer class="bar">
+  <div class="bar-in">
+    <small>© 2026 [YOUR NAME] · England &amp; Wales</small>
+  </div>
+</footer>
+
+</body>
+</html>
